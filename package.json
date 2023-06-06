@@ -1,6 +1,7 @@
 {
   "name": "todoapp_redux",
   "version": "1.0.0",
+  "author": "Shiv K. Saxena",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",

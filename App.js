@@ -8,6 +8,7 @@ import Avatars from "./src/components/Avatars";
 import TaskList from "./src/components/TaskList";
 import { Provider } from "react-redux";
 import store from "./Redux/store";
+import DummyComp from "./src/components/DummyComp";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Description />
         <Avatars />
         <TaskList />
+        <DummyComp />
         <StatusBar style="auto" />
       </ScrollView>
     </Provider>
