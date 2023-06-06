@@ -1,20 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, ScrollView } from "react-native";
+import Header from "./src/components/Header";
+import Title from "./src/components/Title";
+import Description from "./src/components/Description";
+import Avatars from "./src/components/Avatars";
+import TaskList from "./src/components/TaskList";
+import { Provider } from "react-redux";
+import store from "./Redux/store";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider store={store}>
+      <ScrollView contentContainerStyle={styles.container}>
+        <Header />
+        <Title />
+        <Description />
+        <Avatars />
+        <TaskList />
+        <StatusBar style="auto" />
+      </ScrollView>
+    </Provider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexGrow: 1,
+    backgroundColor: "#ffff",
+    paddingVertical: 20,
   },
 });
