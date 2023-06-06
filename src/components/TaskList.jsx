@@ -4,7 +4,7 @@ import { AntDesign } from "@expo/vector-icons";
 import AddList from "./AddList";
 import Delete from "./Delete";
 import { connect } from "react-redux";
-import { toggleTask, deleteAllTasks } from "../../actions/taskActions";
+import { toggleTask, deleteAllTasks } from "../../Redux/actions/taskActions";
 
 const TaskList = ({ tasks, toggleTask, deleteAllTasks }) => {
   const handleCheckboxPress = (taskId) => {

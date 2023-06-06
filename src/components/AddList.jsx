@@ -7,7 +7,7 @@ import {
 } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { connect } from "react-redux";
-import { addTask } from "../../actions/taskActions";
+import { addTask } from "../../Redux/actions/taskActions";
 
 const AddList = ({ addTask }) => {
   const [text, setText] = useState("");

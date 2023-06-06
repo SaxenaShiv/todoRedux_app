@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { Text, View, TouchableOpacity } from "react-native";
 import { connect } from "react-redux";
-import { deleteAllTasks } from "../../actions/taskActions";
+import { deleteAllTasks } from "../../Redux/actions/taskActions";
 
 const Delete = ({ deleteAllTasks }) => {
   const handleDeleteAll = () => {
