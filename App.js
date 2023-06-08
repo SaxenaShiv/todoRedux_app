@@ -1,6 +1,7 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, ScrollView } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import Header from "./src/components/Header.jsx";
 import Title from "./src/components/Title.jsx";
 import Description from "./src/components/Description.jsx";
@@ -13,23 +14,28 @@ import DummyComp from "./src/components/DummyComp.jsx";
 export default function App() {
   return (
     <Provider store={store}>
-      <ScrollView contentContainerStyle={styles.container}>
-        <Header />
-        <Title />
-        <Description />
-        <Avatars />
-        <TaskList />
-        <DummyComp />
-        <StatusBar style="auto" />
+      <ScrollView contentInsetAdjustmentBehavior="automatic">
+        <SafeAreaView style={styles.container}>
+          <Header />
+          <Title />
+          <Description />
+          <Avatars />
+          <TaskList />
+          <DummyComp />
+        </SafeAreaView>
       </ScrollView>
+      <StatusBar style="auto" />
     </Provider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
+    flex: 1,
     backgroundColor: "#ffff",
+  },
+  scrollContainer: {
+    flexGrow: 1,
     paddingVertical: 20,
   },
 });

@@ -1,11 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Header = () => {
   return (
-    <View style={styles.header}>
+    <SafeAreaView style={styles.header}>
       <Text style={{ fontWeight: "bold" }}>Task Details</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffff",
     alignItems: "center",
     justifyContent: "center",
-    paddingTop: 20,
+    paddingTop: 10,
   },
 });
 

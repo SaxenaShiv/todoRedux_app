@@ -1,12 +1,13 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { Text } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 const DummyComp = () => {
   return (
-    <View>
+    <SafeAreaView>
       <Text style={{ textAlign: "center", color: "#D3D3D3" }}>
-        Made with 💖 | Shiv.K Saxena
+        Made with 💖 | Shiv K. Saxena
       </Text>
-    </View>
+    </SafeAreaView>
   );
 };
 

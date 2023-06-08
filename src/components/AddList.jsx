@@ -1,9 +1,14 @@
 import React, { useState } from "react";
-import { StyleSheet, View, TextInput, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  SafeAreaView,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { connect } from "react-redux";
 import { addTask } from "../../Redux/actions/taskActions";
-
+// import { SafeAreaView } from "react-native-safe-area-context";
 const AddList = ({ addTask }) => {
   const [text, setText] = useState("");
 
@@ -15,7 +20,7 @@ const AddList = ({ addTask }) => {
   };
 
   return (
-    <View style={styles.listItem}>
+    <SafeAreaView style={styles.listItem}>
       <TouchableOpacity onPress={handleAddItem}>
         <AntDesign name="plus" size={24} color="green" />
       </TouchableOpacity>
@@ -25,7 +30,7 @@ const AddList = ({ addTask }) => {
         value={text}
         onChangeText={setText}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 

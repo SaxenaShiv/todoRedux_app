@@ -1,5 +1,6 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { AntDesign } from "@expo/vector-icons";
 import AddList from "./AddList.jsx";
 import Delete from "./Delete.jsx";
@@ -21,28 +22,30 @@ const TaskList = ({ tasks, toggleTask, deleteAllTasks }) => {
         key={item.id}
         onPress={() => handleCheckboxPress(item.id)}
       >
-        <View style={styles.listItem}>
+        <SafeAreaView style={styles.listItem}>
           <MyCheckbox checked={item.completed} />
           <Text style={{ marginLeft: 10 }}>{item.text}</Text>
-        </View>
+        </SafeAreaView>
       </TouchableOpacity>
     ));
   };
 
   const MyCheckbox = ({ checked }) => {
     return (
-      <View style={[styles.checkboxBase, checked && styles.checkboxChecked]}>
+      <SafeAreaView
+        style={[styles.checkboxBase, checked && styles.checkboxChecked]}
+      >
         {checked && <AntDesign name="check" size={24} color="white" />}
-      </View>
+      </SafeAreaView>
     );
   };
 
   return (
-    <View>
+    <SafeAreaView>
       <Delete onDeleteAll={handleDeleteAll} />
-      <View style={styles.list}>{renderListItems()}</View>
+      <SafeAreaView style={styles.list}>{renderListItems()}</SafeAreaView>
       <AddList />
-    </View>
+    </SafeAreaView>
   );
 };
 
