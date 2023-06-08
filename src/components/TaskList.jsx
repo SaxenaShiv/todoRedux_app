@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableNativeFeedback } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import AddList from "./AddList";
 import Delete from "./Delete";
@@ -17,16 +17,15 @@ const TaskList = ({ tasks, toggleTask, deleteAllTasks }) => {
 
   const renderListItems = () => {
     return tasks.map((item) => (
-      <TouchableNativeFeedback
+      <TouchableOpacity
         key={item.id}
         onPress={() => handleCheckboxPress(item.id)}
-        background={TouchableNativeFeedback.Ripple("#D1D1D1", false)}
       >
         <View style={styles.listItem}>
           <MyCheckbox checked={item.completed} />
           <Text style={{ marginLeft: 10 }}>{item.text}</Text>
         </View>
-      </TouchableNativeFeedback>
+      </TouchableOpacity>
     ));
   };
 

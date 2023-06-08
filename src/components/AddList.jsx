@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import {
-  StyleSheet,
-  View,
-  TextInput,
-  TouchableNativeFeedback,
-} from "react-native";
+import { StyleSheet, View, TextInput, TouchableOpacity } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { connect } from "react-redux";
 import { addTask } from "../../Redux/actions/taskActions";
@@ -21,9 +16,9 @@ const AddList = ({ addTask }) => {
 
   return (
     <View style={styles.listItem}>
-      <TouchableNativeFeedback onPress={handleAddItem}>
+      <TouchableOpacity onPress={handleAddItem}>
         <AntDesign name="plus" size={24} color="green" />
-      </TouchableNativeFeedback>
+      </TouchableOpacity>
       <TextInput
         style={styles.input}
         placeholder="Add List"
