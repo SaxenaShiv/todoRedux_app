@@ -1,12 +1,12 @@
 import React from "react";
-import { StyleSheet, Text } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { StyleSheet, Text, View } from "react-native";
+//
 
 const Header = () => {
   return (
-    <SafeAreaView style={styles.header}>
+    <View style={styles.header}>
       <Text style={{ fontWeight: "bold" }}>Task Details</Text>
-    </SafeAreaView>
+    </View>
   );
 };
 

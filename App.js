@@ -1,7 +1,7 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, ScrollView } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import Header from "./src/components/Header.jsx";
 import Title from "./src/components/Title.jsx";
 import Description from "./src/components/Description.jsx";
@@ -13,19 +13,21 @@ import DummyComp from "./src/components/DummyComp.jsx";
 
 export default function App() {
   return (
-    <Provider store={store}>
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
+    <SafeAreaProvider>
+      <Provider store={store}>
         <SafeAreaView style={styles.container}>
-          <Header />
-          <Title />
-          <Description />
-          <Avatars />
-          <TaskList />
-          <DummyComp />
+          <ScrollView contentInsetAdjustmentBehavior="automatic">
+            <Header />
+            <Title />
+            <Description />
+            <Avatars />
+            <TaskList />
+            <DummyComp />
+          </ScrollView>
         </SafeAreaView>
-      </ScrollView>
-      <StatusBar style="auto" />
-    </Provider>
+        <StatusBar style="auto" />
+      </Provider>
+    </SafeAreaProvider>
   );
 }
 

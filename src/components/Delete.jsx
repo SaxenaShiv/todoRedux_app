@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { Text, TouchableOpacity } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { Text, View, TouchableOpacity } from "react-native";
+//
 import { connect } from "react-redux";
 import { deleteAllTasks } from "../../Redux/actions/taskActions";
 
@@ -11,7 +11,7 @@ const Delete = ({ deleteAllTasks }) => {
   };
 
   return (
-    <SafeAreaView
+    <View
       style={{
         padding: 10,
         paddingTop: 40,
@@ -23,7 +23,7 @@ const Delete = ({ deleteAllTasks }) => {
       <TouchableOpacity onPress={handleDeleteAll}>
         <FontAwesome5 name="trash-alt" size={24} color="red" />
       </TouchableOpacity>
-    </SafeAreaView>
+    </View>
   );
 };
 

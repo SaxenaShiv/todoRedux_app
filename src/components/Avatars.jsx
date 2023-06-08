@@ -1,6 +1,6 @@
 import React from "react";
-import { StyleSheet, Text, Image } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { StyleSheet, Text, View, Image } from "react-native";
+
 const Avatars = () => {
   const avatarData = [
     { id: 1, image: require("../assets/Avatar1.png") },
@@ -9,7 +9,7 @@ const Avatars = () => {
   ];
 
   return (
-    <SafeAreaView style={styles.avatars}>
+    <View style={styles.avatars}>
       {avatarData.map((avatar) => (
         <Image
           key={avatar.id}
@@ -17,12 +17,12 @@ const Avatars = () => {
           style={styles.avatarsItem}
         />
       ))}
-      <SafeAreaView style={styles.avatarsItem}>
+      <View style={styles.avatarsItem}>
         <Text style={{ textAlign: "center", textAlignVertical: "center" }}>
           +5
         </Text>
-      </SafeAreaView>
-    </SafeAreaView>
+      </View>
+    </View>
   );
 };
 
