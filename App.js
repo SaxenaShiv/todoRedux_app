@@ -25,8 +25,8 @@ export default function App() {
             <DummyComp />
           </ScrollView>
         </SafeAreaView>
-        <StatusBar style="auto" />
       </Provider>
+      <StatusBar style="auto" />
     </SafeAreaProvider>
   );
 }
@@ -35,9 +35,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#ffff",
-  },
-  scrollContainer: {
-    flexGrow: 1,
-    paddingVertical: 20,
   },
 });
