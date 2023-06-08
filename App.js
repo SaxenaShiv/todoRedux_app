@@ -1,14 +1,14 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, ScrollView } from "react-native";
-import Header from "./src/components/Header";
-import Title from "./src/components/Title";
-import Description from "./src/components/Description";
-import Avatars from "./src/components/Avatars";
-import TaskList from "./src/components/TaskList";
+import Header from "./src/components/Header.jsx";
+import Title from "./src/components/Title.jsx";
+import Description from "./src/components/Description.jsx";
+import Avatars from "./src/components/Avatars.jsx";
+import TaskList from "./src/components/TaskList.jsx";
 import { Provider } from "react-redux";
 import store from "./Redux/store";
-import DummyComp from "./src/components/DummyComp";
+import DummyComp from "./src/components/DummyComp.jsx";
 
 export default function App() {
   return (

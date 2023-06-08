@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
-import AddList from "./AddList";
-import Delete from "./Delete";
+import AddList from "./AddList.jsx";
+import Delete from "./Delete.jsx";
 import { connect } from "react-redux";
 import { toggleTask, deleteAllTasks } from "../../Redux/actions/taskActions";
 
